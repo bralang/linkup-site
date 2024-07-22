@@ -5,4 +5,6 @@ theme:
   language: he
   logo: assets/logo.png
   favicon: images/favicon.png
+markdown_extensions:
+  - tables
 
