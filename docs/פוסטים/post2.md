@@ -1,15 +1,11 @@
-# הדרכה שניה 
+---
+date:
+  created: 2024-08-11
+---
 
-## כותרת משנית
+# אוטו - מה? אוטומציה!!
 
-### כותרת שלישית
+כל מה שתרצו לדעת על אוטומציות
+<!-- more -->
 
-text text  
-blablb
-
-
-| Method      | Description                          |
-| ----------- | ------------------------------------ |
-| `GET`       | :material-check:     Fetch resource  |
-| `PUT`       | :material-check-all: Update resource |
-| `DELETE`    | :material-close:     Delete resource |
+מה אפשר לומר כאן?
