@@ -2,7 +2,6 @@ site_name: LinkUp Blog
 site_url: https://blog.link-up.co.il/
 theme:
   name: material
-  custom_dir: overrides
   language: he
   logo: assets/logo.png
   favicon: images/favicon.png
@@ -11,7 +10,19 @@ theme:
     code: Roboto Mono
   features:
     - navigation.footer
-
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tabs
+  palette:
+    primary: custom
+extra_css:
+  - stylesheets/extra.css
+extra:
+  generator: false
+  copyright: Copyright &copy; 2024 ברכה לנג
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:bracha@link-up.co.il
 markdown_extensions:
   - tables
 
