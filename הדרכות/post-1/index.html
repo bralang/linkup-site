@@ -1,0 +1,885 @@
+
+<!doctype html>
+<html lang="he" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://blog.link-up.co.il/%D7%94%D7%93%D7%A8%D7%9B%D7%95%D7%AA/post-1/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../post2/">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+  <title>אוטומציות ופתרונות טכנולוגיים Link Up</title>
+
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Hebrew:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans Hebrew";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gmail-drive-make" class="md-skip">
+          לדלג לתוכן
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="כותרת עליונה">
+    <a href="../.." title="LinkUp Blog" class="md-header__button md-logo" aria-label="LinkUp Blog" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LinkUp Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              הגדרת הרשאות חיבור Gmail וDrive ל Make
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="חיפוש" placeholder="חיפוש" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="חיפוש">
+        
+        <button type="reset" class="md-search__icon md-icon" title="ניקוי" aria-label="ניקוי" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            אתחול חיפוש
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="לשוניות" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  בית
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  הדרכות
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%D7%A4%D7%95%D7%A1%D7%98%D7%99%D7%9D/post-1/" class="md-tabs__link">
+          
+  
+  פוסטים
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ניווט" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="LinkUp Blog" class="md-nav__button md-logo" aria-label="LinkUp Blog" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    LinkUp Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    בית
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    הדרכות
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            הדרכות
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    הגדרת הרשאות חיבור Gmail וDrive ל Make
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    הגדרת הרשאות חיבור Gmail וDrive ל Make
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="תוכן העניינים">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      תוכן העניינים
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-google-cloud-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      שלב 1: יצירת פרויקט ב Google Cloud Console
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      שלב 2 : הגדרת API's הכלולים בהרשאה זו
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-oauth" class="md-nav__link">
+    <span class="md-ellipsis">
+      שלב 3: הגדרת מסך אימות OAuth
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="שלב 3: הגדרת מסך אימות OAuth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gmail-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gmail Api
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drive-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drive Api
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      שלב 4: הגדרת אישורי המשתמש
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../post2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    הדרכה שניה
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../post3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    הדרכה GMAIL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    פוסטים
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            פוסטים
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D7%A4%D7%95%D7%A1%D7%98%D7%99%D7%9D/post-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    הפוסט הראשון שלי
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D7%A4%D7%95%D7%A1%D7%98%D7%99%D7%9D/post2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    אוטו - מה? אוטומציה!!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D7%A4%D7%95%D7%A1%D7%98%D7%99%D7%9D/post3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    הדרכה GMAIL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="תוכן העניינים">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      תוכן העניינים
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-google-cloud-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      שלב 1: יצירת פרויקט ב Google Cloud Console
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      שלב 2 : הגדרת API's הכלולים בהרשאה זו
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-oauth" class="md-nav__link">
+    <span class="md-ellipsis">
+      שלב 3: הגדרת מסך אימות OAuth
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="שלב 3: הגדרת מסך אימות OAuth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gmail-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gmail Api
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drive-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drive Api
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      שלב 4: הגדרת אישורי המשתמש
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="gmail-drive-make">הגדרת הרשאות חיבור Gmail וDrive ל Make</h1>
+<p>כדי לבצע אינטגרציה לישומי Google יש להגדיר OAuth בממשק של Google Cloud Console. 
+היישומים של google הנפוצים ביותר הם Gmail וDrive (בDrive כלולים גם docs, sheets, forms, slides ועוד)
+ולכן במדריך זה נתיחס רק להגדרת 2 ישומים ראשיים אלו.
+שלבי הגדרת OAuth בGoogle
+* ליצור פרויקט ב Google Cloud Console
+* לאפשר API's
+* להגדיר מסך ההסכמה לאימות
+* להגדיר את אישורי המשתמש שלך
+* לחבר בMake עם האישור המותאם</p>
+<h2 id="1-google-cloud-console">שלב 1: יצירת פרויקט ב Google Cloud Console</h2>
+<p>התחברו ל https://console.cloud.google.com/ עם חשבון המשתמש אותו תרצו להגדיר.
+בתפריט העליון לחצו על  Select a project ובחרו בNew project
+הזינו שם לפרויקט (אפשר להשתמש בשם Make לדוגמא)
+לחצו על Create</p>
+<p>במסך הראשי לחצו שוב בתפריט Select a project ובחרו בפרויקט החדש שנוצר
+יש לוודא ששם הפרויקט מופיע בתיבה</p>
+<h2 id="2-apis">שלב 2 : הגדרת API's הכלולים בהרשאה זו</h2>
+<p>בתפריט השמאלי בחרו ב APIs &amp; Services ואז בתפריט השמאלי ב  Library</p>
+<p>הקלידו בשורת החיפוש gmail api ובחרו בתוצאת החיפוש בGmail API
+לחצו על Enable</p>
+<p>יש לחזור על שלבים 1-3 עבור Google Drive API</p>
+<h2 id="3-oauth">שלב 3: הגדרת מסך אימות OAuth</h2>
+<p>בשלב זה מגדירים את הפרטים הטכניים שיוצגו במסך האימות של google שיוצג בהתחברות.
+בתפריט השמאלי לחצו על OAuth consent screen.
+תחת User Type, בחרו בExternal
+לחצו Create
+.</p>
+<p>מלאו את שדות החובה במסך זה
+בApp Name הכניסו שם מייצג כל שהוא לדוגמא Make
+בUser Support Email הכניסו את כתובת המייל של חשבון זה.
+בAuthorized domains לחצו על Add Domain והכניסו שם 2 כתובות דומיין:
+make.com
+integromat.com
+בDeveloper contact information הכניסו שוב את כתובת המייל של חשבון זה.
+לחצו על Save And Continue</p>
+<p>במסך הבא יש הגדרת Scopes תחומי ההרשאה. לחצו על Add or remove scopes
+בחלונית הימנית שנפתחה יש לבחור את הScopes הנדרשים לפי הטבלה המצורפת, יש לכתוב בשורת הFilter את המילה gmail כדי לקבל את כל הscopes של gmail ואת המילה drive בשביל scopes של drive.</p>
+<h4 id="gmail-api">Gmail Api</h4>
+<pre><code>https://mail.google.com/
+https://www.googleapis.com/auth/gmail.labels
+https://www.googleapis.com/auth/gmail.send
+https://www.googleapis.com/auth/gmail.readonly
+https://www.googleapis.com/auth/gmail.compose
+https://www.googleapis.com/auth/gmail.insert
+https://www.googleapis.com/auth/gmail.modify
+https://www.googleapis.com/auth/gmail.metadata
+</code></pre>
+<h4 id="drive-api">Drive Api</h4>
+<pre><code>https://www.googleapis.com/auth/drive
+https://www.googleapis.com/auth/drive.readonly
+</code></pre>
+<p>לאחר סימון כל הרשימה הנדרשת
+יש ללחוץ על Update
+ולאחר מכן לחצו על Save and continue בתחתית העמוד של Scopes</p>
+<p>בשלב הבא Test Users אין צורך למלא כלום, יש ללחוץ על Save And Continue
+בעמוד האחרון בשלב זה יש סיכום של כל המידע שהוזן עד כה, יש לגלול למטה וללחוץ על Back To Dashbord
+בעמוד הבא יש ללחוץ על Publish App</p>
+<h2 id="4">שלב 4: הגדרת אישורי המשתמש</h2>
+<p>בתפריט השמאלי לחצו על Credentials.
+בתפריט העליון בחרו בCreate Credentials וברשימה בחרו ב OAuth client ID.
+בשדה  Application type בחרו ב Web application.
+בשדה Name הכניסו שם מייצג לדוגמא Make.
+ב Authorized redirect URIs לחצו על + Add URI. והכניסו את הכתובת הבאה:
+https://www.integromat.com/oauth/cb/google-restricted 
+לחצו על Create</p>
+<p>העתיקו את הערכים של Client ID ושל Client secret ושמרו אותם במקום בטוח. נתונים אלו ישמשו אתכם להתחברות בMake.
+התחברות לאפליקצית Gmail / Drive מMake
+בסנריו בMake הוסיפו מודול של Gmail או Drive
+בשדה Connection לחצו על Add
+בחלונית שנפתחה יש להזין שם משמעותי לחיבור זה (מומלץ להשתמש בשם המייל)
+סמנו בתחתית החלונית Show advanced settings ויופיעו 2 שדות להכנסת הClient ID והClient Secret ששמרתם בשלב קודם
+הכניסו את הערכים ולחצו על Sign In with Google.
+תפתח חלונית הזדהות של Google
+יש לבחור בחשבון של המייל המיועד לחיבור ולהזין סיסמא
+תופיע חלונית אזהרה שהאפליקציה לא אומתה ע"י גוגל
+יש ללחוץ על מתקדם ועל כניסה אל integromat.com (לא מאובטח)
+בחלונית הבאה יש לסמן V בכל ההרשאות, שימו לב! ההרשאה ניתנת לשימושכם בלבד דרך Make ואינה מאפשרת לגורמים אחרים לגשת לחשבון, לכן אין לחשוש לסמן הגדרה זו.
+לחצו על המשך
+וסיימנו!</p>
+<p>במידה ונתקלים בבעיה כל שהיא בשלב זה יש לחזור חזרה על כל השלבים ולוודא שבוצעו כראוי
+שגיאות נפוצות:
+לא הוגדר Publish App בשלב 3 סעיף 13
+לא הוגדרו כראוי כל הscopes הנדרשים בשלב 3</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="כותרת תחתונה" >
+        
+          
+          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="הקודם: בית">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                הקודם
+              </span>
+              <div class="md-ellipsis">
+                בית
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../post2/" class="md-footer__link md-footer__link--next" aria-label="הבא: הדרכה שניה">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                הבא
+              </span>
+              <div class="md-ellipsis">
+                הדרכה שניה
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:bracha@link-up.co.il" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.8l167.6-182.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u05d4\u05d5\u05e2\u05ea\u05e7 \u05dc\u05dc\u05d5\u05d7", "clipboard.copy": "\u05d4\u05e2\u05ea\u05e7\u05d4 \u05dc\u05dc\u05d5\u05d7", "search.result.more.one": "\u05e2\u05d5\u05d3 \u05d0\u05d7\u05d3 \u05d1\u05d3\u05e3 \u05d4\u05d6\u05d4", "search.result.more.other": "\u05e2\u05d5\u05d3 # \u05d1\u05d3\u05e3 \u05d4\u05d6\u05d4", "search.result.none": "\u05d0\u05d9\u05df \u05de\u05e1\u05de\u05db\u05d9\u05dd \u05ea\u05d5\u05d0\u05de\u05d9\u05dd", "search.result.one": "\u05de\u05e1\u05de\u05da1 \u05ea\u05d5\u05d0\u05dd", "search.result.other": "# \u05de\u05e1\u05de\u05da \u05ea\u05d5\u05d0\u05dd", "search.result.placeholder": "\u05d9\u05e9 \u05dc\u05d4\u05e7\u05dc\u05d9\u05d3 \u05db\u05d3\u05d9 \u05dc\u05d4\u05ea\u05d7\u05d9\u05dc \u05dc\u05d7\u05e4\u05e9", "search.result.term.missing": "\u05d7\u05e1\u05e8", "select.version": "\u05d1\u05d7\u05d9\u05e8\u05ea \u05d2\u05e8\u05e1\u05d4"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
